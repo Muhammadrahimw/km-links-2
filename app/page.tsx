@@ -76,13 +76,13 @@ export default async function Home() {
 				<source src="/bg-video.mp4" type="video/mp4" />
 			</video>
 			<div className="absolute top-0 left-0 w-full h-full backdrop-blur-3xl bg-[#ffffff27]"></div>
-			<div className="w-full max-w-[36rem] px-4 sm:px-6 md:px-8 py-10 text-xl pt-20 relative z-20">
+			<div className="w-full max-w-[36rem] px-4 sm:px-6 md:px-8 py-10 text-xl pt-20 relative z-20 mt-12 max-[576px]:mt-0">
 				<video
 					autoPlay
 					muted
 					loop
 					playsInline
-					className="absolute top-0 left-0 w-full h-full object-cover">
+					className="absolute top-0 left-0 w-full h-full object-cover rounded-t-3xl max-[576px]:rounded-none">
 					<source src="/bg-video.mp4" type="video/mp4" />
 				</video>
 				<div className="flex flex-col items-center gap-3">
