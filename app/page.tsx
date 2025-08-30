@@ -87,7 +87,7 @@ export default async function Home() {
 				</video>
 				<div className="flex flex-col items-center gap-3">
 					<div
-						className="z-10 bg-[#0a3d699d] backdrop-blur-md"
+						className="z-10 bg-[#0a3d69be] backdrop-blur-md"
 						style={{
 							display: "flex",
 							justifyContent: "center",
