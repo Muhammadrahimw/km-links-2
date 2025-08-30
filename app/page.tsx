@@ -7,7 +7,7 @@ export default async function Home() {
 
 	const defaults = {
 		logo: "/ogo.png",
-		handle: "kengmakon",
+		handle: "KengMakon",
 		phone: "+998 (98) 300 36 76",
 		phoneHref: "tel:+998983003676",
 		catalog: "https://kengmakon.uz/catalog/spalnyy-garnitur",
@@ -108,7 +108,9 @@ export default async function Home() {
 						)}
 					</div>
 
-					<h1 className="text-xl font-medium text-white z-10">{handle}</h1>
+					<h1 className="text-xl font-medium text-white z-10">
+						{handle.replace(`m`, `m`.toUpperCase())}
+					</h1>
 				</div>
 
 				<section className="mt-6 space-y-4">
