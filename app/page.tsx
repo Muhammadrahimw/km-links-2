@@ -40,6 +40,13 @@ export default async function Home() {
 						href: defaults.catalog,
 						icon: "📘",
 					},
+					{
+						id: "profile",
+						title: "Profile",
+						subtitle: "Просмотр профиля",
+						href: `https://km-profile-app.netlify.app`,
+						icon: "👤",
+					},
 			  ];
 
 	const socials =
