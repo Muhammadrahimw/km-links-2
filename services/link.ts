@@ -5,7 +5,7 @@ export type Action = {
 	title: string;
 	subtitle?: string;
 	href: string;
-	icon?: string;
+	icon?: React.ReactNode;
 };
 
 interface CompanyProfile {
