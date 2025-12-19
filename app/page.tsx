@@ -10,7 +10,7 @@ export default async function Home() {
 		handle: "KengMakon",
 		phone: "+998 (98) 300 36 76",
 		phoneHref: "tel:+998983003676",
-		catalog: "https://kengmakon.uz/catalog/spalnyy-garnitur",
+		catalog: "https://km-catalog.netlify.app",
 		socials: {
 			telegram: "https://t.me/kengmakonuz",
 			instagram: "https://www.instagram.com/kengmakon.uzb/",
