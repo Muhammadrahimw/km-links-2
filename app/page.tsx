@@ -10,7 +10,7 @@ export default async function Home() {
 		handle: "KengMakon",
 		phone: "+998 (98) 300 36 76",
 		phoneHref: "tel:+998983003676",
-		catalog: "https://km-catalog.netlify.app",
+		catalog: "https://catalog.kmapp.uz",
 		socials: {
 			telegram: "https://t.me/kengmakonuz",
 			instagram: "https://www.instagram.com/kengmakon.uzb/",
@@ -46,7 +46,7 @@ export default async function Home() {
 						id: "profile",
 						title: "Профиль компании",
 						subtitle: "Узнайте больше о деятельности компании",
-						href: `https://km-profile-app.netlify.app`,
+						href: `https://profil.kmapp.uz/`,
 						icon: (
 							<svg
 								width="19"
