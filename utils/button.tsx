@@ -18,17 +18,28 @@ export function Button({
 			href={href}
 			target={href.startsWith("http") ? "_blank" : undefined}
 			rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-			className="block w-full rounded-lg px-5 py-4 shadow-sm opacity-[0.98] transition-transform hover:scale-[1.01] hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-offset-2 text-white bg-[#19183b] backdrop-blur-[6px]">
-			<div className="flex flex-col items-center text-center">
+			className="group relative block w-full rounded-xl px-5 py-4 text-white bg-[#19183b]/95 backdrop-blur-md overflow-hidden transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-[0_8px_30px_rgba(25,24,59,0.5)] hover:bg-[#1f1e4a] focus:outline-none focus:ring-2 focus:ring-[#2d2b6b]/50 focus:ring-offset-2 focus:ring-offset-transparent">
+			{/* Gradient border effect */}
+			<div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+				<div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#2d2b6b]/30 via-[#3d3a8a]/25 to-[#2d2b6b]/30" />
+			</div>
+
+			{/* Shine effect */}
+			<div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+			{/* Content */}
+			<div className="relative flex flex-col items-center text-center">
 				<div
-					className="flex items-center gap-2 font-normal tracking-wide"
+					className="flex items-center gap-2 font-normal tracking-wide transition-transform duration-300 group-hover:scale-105"
 					style={{color}}>
-					{icon}
+					<span className="transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
+						{icon}
+					</span>
 					{title}
 				</div>
 				{subtitle && (
 					<div
-						className="text-sm font-light opacity-90 mt-1 tracking-wide"
+						className="text-sm font-light opacity-80 mt-1 tracking-wide transition-opacity duration-300 group-hover:opacity-100"
 						style={{color}}>
 						{subtitle}
 					</div>

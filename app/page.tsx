@@ -136,8 +136,8 @@ export default async function Home() {
 						{logo && (
 							<Image
 								className="z-10"
-								width={115}
-								height={75}
+								width={110}
+								height={73}
 								src={logo}
 								alt={`${received.name ?? handle} logo`}
 							/>
