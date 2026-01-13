@@ -6,7 +6,7 @@ export default async function Home() {
 	const received = await getCompany();
 
 	const defaults = {
-		logo: "/ogo.png",
+		logo: "/Screenshot 2026-01-13 181343.png",
 		handle: "KengMakon",
 		phone: "+998 (98) 300 36 76",
 		phoneHref: "tel:+998983003676",
@@ -19,7 +19,7 @@ export default async function Home() {
 	} as const;
 
 	const color = "#fff";
-	const logo = received.logo || defaults.logo;
+	const logo = defaults.logo || received.logo;
 	const handle = received.handle || defaults.handle;
 
 	const actions: Action[] =
@@ -43,6 +43,22 @@ export default async function Home() {
 						),
 					},
 					{
+						id: "profile",
+						title: "Профиль компании",
+						subtitle: "Узнайте больше о деятельности компании",
+						href: `https://km-profile-app.netlify.app`,
+						icon: (
+							<svg
+								width="19"
+								height="19"
+								viewBox="0 0 512 512"
+								fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M463.952,90.044H353.617c-19.605-118.99-175.638-118.934-195.236,0H48.048C21.554,90.044,0,111.598,0,138.091v325.04c0,26.493,21.554,48.048,48.048,48.048h415.905c26.494,0,48.048-21.554,48.048-48.048v-325.04C512,111.598,490.446,90.044,463.952,90.044z M196.516,89.049c11.045-67.023,107.925-67.016,118.969-0.001l0.165,0.995H196.352L196.516,89.049z M474.537,463.131c0,5.837-4.748,10.585-10.585,10.585H48.048c-5.837,0-10.585-4.748-10.585-10.585V292.912l162.867,41.589v24.5c0,10.345,8.387,18.732,18.732,18.732h73.875c10.345,0,18.732-8.387,18.732-18.732v-24.5l162.867-41.589V463.131z M237.794,340.27v-52.742h36.412v52.742H237.794z M474.538,254.247l-162.869,41.589v-27.04c0-10.345-8.387-18.732-18.732-18.732h-73.875c-10.345,0-18.732,8.387-18.732,18.732v27.04L37.463,254.247V138.091c0-5.836,4.748-10.583,10.585-10.583c5.626,0,407.533,0,415.905,0c5.837,0,10.585,4.748,10.585,10.585V254.247z" />
+							</svg>
+						),
+					},
+					{
 						id: "catalog",
 						title: "Каталог",
 						subtitle: "Ознакомьтесь с нашим каталогом",
@@ -57,22 +73,6 @@ export default async function Home() {
 								strokeWidth="2"
 								xmlns="http://www.w3.org/2000/svg">
 								<path d="M5.5,18 C4.11928813,18 3,19.1192881 3,20.5 C3,21.8807119 4.11928813,23 5.5,23 L22,23 M3,20.5 L3,3.5 C3,2.11928813 4.11928813,1 5.5,1 L21,1 L21,18.0073514 L5.49217286,18.0073514 M20.5,18 C19.1192881,18 18,19.1192881 18,20.5 C18,21.8807119 19.1192881,23 20.5,23 L20.5,23" />
-							</svg>
-						),
-					},
-					{
-						id: "profile",
-						title: "Профиль компании",
-						subtitle: "Узнайте больше о деятельности компании",
-						href: `https://km-profile-app.netlify.app`,
-						icon: (
-							<svg
-								width="19"
-								height="19"
-								viewBox="0 0 512 512"
-								fill="currentColor"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M463.952,90.044H353.617c-19.605-118.99-175.638-118.934-195.236,0H48.048C21.554,90.044,0,111.598,0,138.091v325.04c0,26.493,21.554,48.048,48.048,48.048h415.905c26.494,0,48.048-21.554,48.048-48.048v-325.04C512,111.598,490.446,90.044,463.952,90.044z M196.516,89.049c11.045-67.023,107.925-67.016,118.969-0.001l0.165,0.995H196.352L196.516,89.049z M474.537,463.131c0,5.837-4.748,10.585-10.585,10.585H48.048c-5.837,0-10.585-4.748-10.585-10.585V292.912l162.867,41.589v24.5c0,10.345,8.387,18.732,18.732,18.732h73.875c10.345,0,18.732-8.387,18.732-18.732v-24.5l162.867-41.589V463.131z M237.794,340.27v-52.742h36.412v52.742H237.794z M474.538,254.247l-162.869,41.589v-27.04c0-10.345-8.387-18.732-18.732-18.732h-73.875c-10.345,0-18.732,8.387-18.732,18.732v27.04L37.463,254.247V138.091c0-5.836,4.748-10.583,10.585-10.583c5.626,0,407.533,0,415.905,0c5.837,0,10.585,4.748,10.585,10.585V254.247z" />
 							</svg>
 						),
 					},
@@ -111,7 +111,7 @@ export default async function Home() {
 				className="fixed top-0 left-0 w-full h-full object-cover">
 				<source src="/bg-video-no_audio.mp4" type="video/mp4" />
 			</video>
-			<div className="fixed top-0 left-0 w-full h-full backdrop-blur-3xl bg-[#ffffff27]"></div>
+			<div className="fixed top-0 left-0 w-full h-full backdrop-blur-3xl bg-[#19183B80]"></div>
 			<div className="w-full max-w-[36rem] px-4 sm:px-6 md:px-8 py-10 text-xl pt-20 relative z-20 mt-0">
 				<video
 					autoPlay
@@ -123,7 +123,7 @@ export default async function Home() {
 				</video>
 				<div className="flex flex-col items-center gap-3">
 					<div
-						className="z-10 bg-[#0a3d69be] backdrop-blur-md"
+						className="z-10 bg-[#19183b] opacity-[0.98] backdrop-blur-md"
 						style={{
 							display: "flex",
 							justifyContent: "center",
@@ -136,15 +136,15 @@ export default async function Home() {
 						{logo && (
 							<Image
 								className="z-10"
-								width={102}
-								height={70}
+								width={115}
+								height={75}
 								src={logo}
 								alt={`${received.name ?? handle} logo`}
 							/>
 						)}
 					</div>
 
-					<h1 className="text-xl font-medium text-white z-10">
+					<h1 className="text-xl font-medium text-white z-10 tracking-wide">
 						{handle.replace(`m`, `m`.toUpperCase())}
 					</h1>
 				</div>
