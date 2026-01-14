@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 	],
 	authors: [{name: "Keng Makon"}],
 	icons: {
-		icon: "/file.svg",
+		icon: "/logo-circle.svg",
 	},
 	openGraph: {
 		title: "Keng Makon",

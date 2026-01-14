@@ -6,7 +6,7 @@ export default async function Home() {
 	const received = await getCompany();
 
 	const defaults = {
-		logo: "/Screenshot 2026-01-13 181343.png",
+		logo: "/logo-circle-with-text-1.svg",
 		handle: "KengMakon",
 		phone: "+998 (98) 300 36 76",
 		phoneHref: "tel:+998983003676",
@@ -87,18 +87,78 @@ export default async function Home() {
 						title: "Telegram",
 						subtitle: "Подпишитесь на наш канал",
 						href: defaults.socials.telegram,
+						icon: (
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								strokeWidth="1.5"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+							</svg>
+						),
 					},
 					{
 						id: "instagram",
 						title: "Instagram",
 						subtitle: "Следите за новостями",
 						href: defaults.socials.instagram,
+						icon: (
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								strokeWidth="1.5"
+								xmlns="http://www.w3.org/2000/svg">
+								<rect
+									x="2"
+									y="2"
+									width="20"
+									height="20"
+									rx="5"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+								<circle
+									cx="12"
+									cy="12"
+									r="4"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+								<circle cx="18" cy="6" r="1" fill="currentColor" />
+							</svg>
+						),
 					},
 					{
 						id: "facebook",
 						title: "Facebook",
 						subtitle: "Будьте в курсе новостей",
 						href: defaults.socials.facebook,
+						icon: (
+							<svg
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								strokeWidth="1.5"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+							</svg>
+						),
 					},
 			  ];
 	return (
@@ -118,24 +178,14 @@ export default async function Home() {
 					muted
 					loop
 					playsInline
-					className="absolute top-0 left-0 w-full h-full object-cover">
-					<source src="/bg-video-no_audio.mp4" type="video/mp4" />
+					className="absolute top-0 left-0 w-full h-full object-cover object-left">
+					<source src="/bg-video-no_audio-2.mp4" type="video/mp4" />
 				</video>
 				<div className="flex flex-col items-center gap-3">
-					<div
-						className="z-10 bg-[#19183b] opacity-[0.98] backdrop-blur-md"
-						style={{
-							display: "flex",
-							justifyContent: "center",
-							alignItems: "center",
-							borderRadius: "50%",
-							overflow: "hidden",
-							width: "150px",
-							height: "150px",
-						}}>
+					<div className="z-10 flex items-center justify-center w-[150px] h-[150px] rounded-full overflow-hidden bg-[#19183b] opacity-[0.98] backdrop-blur-md">
 						{logo && (
 							<Image
-								className="z-10"
+								className="z-10 brightness-0 invert"
 								width={110}
 								height={73}
 								src={logo}
@@ -173,12 +223,14 @@ export default async function Home() {
 							title: string;
 							subtitle?: string;
 							href: string;
+							icon?: React.ReactNode;
 						}) => (
 							<Button
 								key={s.id}
 								href={s.href}
 								title={s.title}
 								subtitle={s.subtitle}
+								icon={s.icon}
 								color={color}
 							/>
 						)
