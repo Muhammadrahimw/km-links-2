@@ -179,7 +179,7 @@ export default async function Home() {
 					loop
 					playsInline
 					className="absolute top-0 left-0 w-full h-full object-cover object-left">
-					<source src="/bg-video-no_audio-2.mp4" type="video/mp4" />
+					<source src="/bg-video-no_audio.mp4" type="video/mp4" />
 				</video>
 				<div className="flex flex-col items-center gap-3">
 					<div className="z-10 flex items-center justify-center w-[150px] h-[150px] rounded-full overflow-hidden bg-[#19183b] opacity-[0.98] backdrop-blur-md">
