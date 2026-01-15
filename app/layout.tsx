@@ -40,9 +40,10 @@ export const metadata: Metadata = {
 		"Каталог мебели",
 	],
 	authors: [{name: "Keng Makon"}],
-	icons: {
-		icon: "/logo-circle.svg",
-	},
+	icons: [
+		{url: "/favicon-dark.svg", media: "(prefers-color-scheme: light)"},
+		{url: "/favicon-light.svg", media: "(prefers-color-scheme: dark)"},
+	],
 	openGraph: {
 		title: "Keng Makon",
 		siteName: "Keng Makon",
