@@ -43,6 +43,15 @@ export const metadata: Metadata = {
 	icons: [
 		{url: "/favicon-dark.svg", media: "(prefers-color-scheme: light)"},
 		{url: "/favicon-light.svg", media: "(prefers-color-scheme: dark)"},
+		{
+			url: "/favicon.ico",
+			rel: "icon",
+		},
+		{
+			url: "/favicon-default.png",
+			rel: "apple-touch-icon",
+			sizes: "180x180",
+		},
 	],
 	openGraph: {
 		title: "Keng Makon",
